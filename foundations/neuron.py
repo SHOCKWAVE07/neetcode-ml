@@ -14,9 +14,9 @@ class Solution:
         # Sigmoid: σ(z) = 1 / (1 + exp(-z))
         # ReLU: max(0, z)
         # return round(your_answer, 5)
-        z = (x @ w) + b
+        z = np.dot(w,x) + b
         if activation == "sigmoid":
-            y = 1 / (1 + math.e**(-z))
+            y = 1.0 / (1.0 + np.exp(-z))
         else:
             y = max(0.0,z)
 
